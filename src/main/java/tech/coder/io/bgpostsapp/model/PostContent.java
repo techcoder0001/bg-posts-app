@@ -7,25 +7,16 @@ import java.util.Date;
 @Table(name = "post_content")
 public class PostContent {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long post_content_id;
     @Id
-    @Column(name = "postId")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "post_id")
     private Long postId;
-    @Column(name = "postTitle")
+    @Column(name = "post_title")
     private String postTitle;
-    @Column(name = "postDate")
+    @Column(name = "post_date")
     private Date postDate;
-    @Column(name = "postBody")
+    @Column(name = "post_body")
     private String postBody;
-
-    public Long getPost_content_id() {
-        return post_content_id;
-    }
-
-    public void setPost_content_id(Long post_content_id) {
-        this.post_content_id = post_content_id;
-    }
 
     public Long getPostId() {
         return postId;

@@ -36,7 +36,6 @@ public class PostContentService {
     public PostContent updatePost(PostContent postContent, Long id){
         Optional<PostContent> optionalPostContent = postContentRepository.findById(id);
         if (optionalPostContent.isPresent()){
-            optionalPostContent.get().setPost_content_id(id);
             if (postContent.getPostId() != 0 || postContent.getPostId() != null){
                 optionalPostContent.get().setPostId(postContent.getPostId());
             }
